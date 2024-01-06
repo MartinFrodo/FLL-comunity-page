@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Engagement Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>CommunityHub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#feed">Feed</a></li>
+                <li><a href="#collaborate">Collaborate</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Profile Section -->
+        <section id="profile" class="content-section">
+            <h2>Your Profile</h2>
+            <!-- Profile details and editing form can be added here -->
+        </section>
+
+        <!-- Feed Section -->
+        <section id="feed" class="content-section">
+            <h2>Feed</h2>
+            <!-- Multimedia-rich feed for user posts -->
+        </section>
+
+        <!-- Collaborate Section -->
+        <section id="collaborate" class="content-section">
+            <h2>Collaborate</h2>
+            <!-- Dedicated collaboration spaces for joint projects -->
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="content-section">
+            <h2>Community</h2>
+            <!-- Forums, discussion threads, and community events -->
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="content-section">
+            <h2>Events</h2>
+            <!-- Integrated event planning tools -->
+        </section>
+
+        <!-- Learning Section -->
+        <section id="learning" class="content-section">
+            <h2>Learning Paths and Challenges</h2>
+            <!-- Structured learning paths, challenges, and achievements -->
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="content-section">
+            <h2>Settings</h2>
+            <!-- User preferences, account settings, etc. -->
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 CommunityHub</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Fetch data from the backend when the document is ready
+            $.get("http://localhost:3000/api/userprofiles", function (data) {
+                console.log(data);
+                // Handle the fetched data as needed
+            });
+        });
+    </script>
+</body>
+</html>
