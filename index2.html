@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+	<style>
+		/* Styles for the header*/
+		body{
+			background-image: url("images/1.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			font-family: sans-serif, Arial, Helvetica;
+			color: #000000;
+			background-color: rgb(255, 255, 255);
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			position: relative; 
+            
+            /* add this line */
+		}
+		.container{
+			max-width: 1170px;
+			margin: auto;
+			padding:  30px;
+		}
+		.links{
+			width: 200px;
+	
+			background-color: #4b6e22;
+			padding: 20px 0px 20px 0px;
+			display: flex;
+			align-items: flex-start;
+		}
+		/* navbar info*/
+		.navbar{
+			width: 100%;
+			padding: 3px ;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: rgb(222, 155, 23);
+			text-align: right;
+		}
+		.navbar .logo{
+			width: 150px;
+			cursor: pointer;
+			float: left;
+		}
+		.navbar ul{
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		.main-content{
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.navbar ul li{
+			list-style: none;
+			margin-right: 20px;
+		}
+		.navbar ul li a{
+			text-decoration: none;
+			color: #000;
+			font-weight: 600;
+			float: right;
+		}
+		.navbar ul li a:hover{
+			color: #3c77d6;
+		}
+		/* navbar info end  */
+		/* Styles for the content section*/
+		.content{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: 20px;
+		}
+		/* Styles for the links section*/
+		.links{
+			width: 50px;
+			background-color: orange;
+			padding: 0px;
+			margin: 0px;
+			border-radius: 0;
+			position: fixed; /* add this line */
+			top: 0; /* add this line */
+			left: 0; /* add this line */
+			bottom: 0; /* add this line */
+		}
+		.links a{
+			display: block;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+		}
+		.links a:hover{
+			background-color: #ccc;
+		}
+		button{
+			background-color: #cb9018;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			margin: 4px 2px;
+			cursor: pointer;
+			float: right;
+		}
+		button:hover{
+			background-color: #cdcdcd;
+		}
+		.TestButton{
+			display: inline-block;
+			background: #a29bfe;
+			color: #fff;
+			text-decoration: none;
+			padding: 12px 34px;
+			font-size: 13px;
+			font-weight: 500;
+			border-radius: 6px;
+			transition: background 0.5s ease;
+		}
+		.TestButton:hover{
+			background: #6c5ce7;
+		}
+		/* tlačítka na ľavo*/
+		.orange-stripe{
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100px;
+			background-color: orange;
+            
+		}
+		/*Koniec tlačítka na ľavo*/
+		/* Styles for the main content*/
+		.main-content{
+			flex-grow: 1;
+			padding: 20px;
+		}
+		h1{
+			text-align: center;
+		}
+		form{
+			max-width: 600px;
+			margin: 0 auto;
+			background-color: #ff9d7f;
+		}
+		label{
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="radio"]{
+			margin-right: 5px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<nav>
+				<img src="images/Logo.png" class="logo">
+				<ul>
+					<li><a href="aboutus.html">About Us</a></li> 
+					<li><a href="Contact.html">Contact Us</a></li>					
+					<li><a href="login.html">Login</a></li> 				
+				</ul>
+			</nav>
+		</div>
+		<div class="orange-stripe">
+			<nav>
+				<ul>
+					<button><a href="#">Link 1</a></button>
+					<button><a href="#">Link 2</a></button>
+					<button><a href="#">Link 3</a></button>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="main-content">
+		<!-- main content goes here -->
+		<h1>Discover Your Perfect Hobby</h1>
+		<button class="TestButton"><a href="questionare.html"> Take the test</a></button>
+		<div class="container"> lalalalalallala</div>
+		<p> Lorem ipsum dolor sit amet</p>
+
+	</div>
+</body>
+</html>
