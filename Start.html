@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>HobbieHub</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body{
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif, Arial, Helvetica;
+            color: #fff;
+            background-color: rgb(207, 175, 135);
+            margin: 0;
+            padding: 0;
+        } 
+        .container{
+            max-width: 1170px;
+            margin: auto;
+            padding:  30px;
+            
+        }
+        /* navbar info */
+        .navbar{
+            width: 100%;
+            padding: 3px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(222, 155, 23);
+            text-align: right;
+                        
+        }
+        .navbar .logo{
+            width: 150px;
+            cursor: pointer;
+            float: left;
+        }
+        .navbar ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            float: right;
+        }
+        .navbar ul li a:hover{
+            color: #3c77d6;
+        }
+        /* navbar info end  */
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0;
+        }
+        .row .col{
+            flex: 1;
+            text-align: center;
+        }
+        .row .col h1{
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .row .col p{
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .hero-btn{
+            display: inline-block;
+            background: #a29bfe;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 34px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background 0.5s ease;
+        }
+        .hero-btn:hover{
+            background: #6c5ce7;
+        }
+        .row .col:last-child{
+            text-align: right;
+        }
+        .row .col:last-child img{
+            width: 100%;
+            max-width: 500px;
+        }
+        @media(max-width: 991px){
+            .container{
+                max-width: 100%;
+            }
+            .row{
+                flex-direction: column;
+            }
+            .row .col{
+                margin-bottom: 50px;
+            }
+            .row .col:last-child{
+                margin-bottom: 0;
+            }
+            .row .col h1{
+                font-size: 40px;
+            }
+            .row .col p{
+                font-size: 16px;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <img src="images/Logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li> 
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>HobbieHub</h1>
+                <p>HobbieHub is a platform for people to find new hobbies, connect with others which are already in that hobbie and could help them in their journey</p>
+                <a href="login.html" class="hero-btn">Join Now</a>
+            </div>
+            <div class="col">
+                <div class="hero-img">
+                    <img src="images/Hero.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>
