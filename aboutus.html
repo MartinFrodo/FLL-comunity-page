@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
-    <title>HobbieHub</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>About Us</title>
+    
     <style>
         body{
             background-image: url("images/1.jpg");
@@ -10,8 +10,8 @@
             background-size: cover;
             background-position: center;
             font-family: sans-serif, Arial, Helvetica;
-            color: #fff;
-            background-color: rgb(207, 175, 135);
+            color: #000000;
+            background-color: rgb(255, 255, 255);
             margin: 0;
             padding: 0;
         } 
@@ -87,7 +87,7 @@
             font-size: 13px;
             font-weight: 500;
             border-radius: 6px;
-            transition: background 0.5s ease;
+            
         }
         .hero-btn:hover{
             background: #6c5ce7;
@@ -99,55 +99,96 @@
             width: 100%;
             max-width: 500px;
         }
-        @media(max-width: 991px){
-            .container{
-                max-width: 100%;
-            }
-            .row{
-                flex-direction: column;
-            }
-            .row .col{
-                margin-bottom: 50px;
-            }
-            .row .col:last-child{
-                margin-bottom: 0;
-            }
-            .row .col h1{
-                font-size: 40px;
-            }
-            .row .col p{
-                font-size: 16px;
-            }
+        .footer{
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
         }
-        
-    </style>
 
+        
+    h1 {
+        margin: 0;
+    }
+    
+    main {
+        margin: 20px;
+    }
+    
+    .team-member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+   
+    button {
+        padding: 10px 20px;
+        background-color: #cb9018 ;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #000000;
+    }
+    .Logo{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+       
+    }
+
+     </style>
 </head>
 <body>
+<header>
+    <div class="navbar">
+        <img src="images/Logo.png" class="logo">
+        <nav>
+            <ul>
+                
+                <li><a href="aboutus.html">About Us</a></li> 
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+            </ul>
+        </nav>
+    </div>
     
-    <div class="container">
-        <div class="navbar">
-            <img src="images/Logo.png" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="aboutus.html">About Us</a></li> 
-                    <li><a href="Contact.html">Contact Us</a></li>
-                    <li><a href="login.html">Login</a></li> 
-                </ul>
-            </nav>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h1>HobbieHub</h1>
-                <p>HobbieHub is a platform for people to find new hobbies, connect with others which are already in that hobbie and could help them in their journey</p>
-                <a href="login.html" class="hero-btn">Join Now</a>
-            </div>
-            <div class="col">
-                <div class="hero-img">
-                    <img src="images/Hero.png">
-                </div>
-            </div>
+</header>
+<main>
+    <h1>About Us</h1>
+    <h2>Our Team</h2>
+    <div class="team-member">
+        <img src="team-member1.jpg" alt="Team Member 1">
+        <div>
+            <h3>John Doe</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
         </div>
     </div>
-
+    <div class="team-member">
+        <img src="team-member2.jpg" alt="Team Member 2">
+        <div>
+            <h3>Jane Smith</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="team-member3.jpg" alt="Team Member 3">
+        <div>
+            <h3>David Johnson</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </div>
+    </div>
+    <button onclick="history.back()">Go Back</button>
+</main>
+</body>
 </html>
+

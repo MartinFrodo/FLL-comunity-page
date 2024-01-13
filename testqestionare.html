@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobby Recommender</title>
     <style>
@@ -93,29 +93,8 @@
     </style>
 </head>
 <body>
-    <header>
-        
-            <div class="navbar">
-                <nav>
-                    <img src="images/Logo.png" class="logo">
-                    <ul>
-                        <li><a href="aboutus.html">About Us</a></li> 
-                        <li><a href="Contact.html">Contact Us</a></li>
-                        <li><a href="login.html">Login</a></li> 
-                        
-                    </ul>
-                </nav>
-            </div>
-        
-    </header>
-    
-
     <h1>Discover Your Perfect Hobby</h1>
-    <div class="sidepanel">
-        hhhhhhh
-        hhhhhhh
-    </div>
-    <form id="hobbyForm" onsubmit="submitForm(); return false;">
+    <form id="hobbyForm">
         
             <!-- Activity Preferences -->
             <label>Do you prefer outdoor or indoor activities?
@@ -240,43 +219,49 @@
                     </label>
     
                     <button type="button" onclick="submitForm()">Discover My Hobby</button>
-                
-            </form>
+    </form>
+    <button type="button" onclick="submitForm()">Find Hobbies</button>
+    <div id="result"></div>
 
-            <div id="result"></div>
+    <script>
+        function submitForm() {
+            const form = document.getElementById('hobbyForm');
+            const formData = new FormData(form);
+            const answers = {};
 
-            <script>
-                function submitForm() {
-                    const form = document.getElementById('hobbyForm');
-                    const formData = new FormData(form);
-                    const answers = {};
+            formData.forEach((value, key) => {
+                answers[key] = value;
+            });
 
-                    formData.forEach((value, key) => {
-                        answers[key] = value;
-                    });
+            const relevantHobbies = analyzeAnswers(answers);
 
-                    const recommendedHobbies = analyzeAnswers(answers);
+            // Display the result
+            displayResult(relevantHobbies);
+        }
 
-                    // Display the result
-                    displayResult(recommendedHobbies);
+        function calculateScore(answers, criteria) {
+            let score = 0;
+
+            for (const [key, value] of Object.entries(criteria)) {
+                if (Array.isArray(value)) {
+                    // For checkboxes (arrays), check if at least one option is selected
+                    if (value.some(option => answers[key] && answers[key].includes(option))) {
+                        score++;
+                    }
+                } else {
+                    // For radio buttons, check for an exact match
+                    if (answers[key] === value) {
+                        score++;
+                    }
                 }
-                
-                function calculateScore(answers, criteria) {
-                    return Object.keys(criteria).filter(key => {
-                        if (Array.isArray(criteria[key])) {
-                            // For checkboxes (arrays), check if at least one option is selected
-                            return criteria[key].some(option => answers[key] && answers[key].includes(option));
-                        } else {
-                            // For radio buttons, check for an exact match
-                            return answers[key] === criteria[key];
-                        }
-                    }).length;
-                }
-                
-                function analyzeAnswers(answers) {
+            }
 
-                    const hobbies = 
-                    {   'Photography': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('visualArts'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+            return score;
+        }
+
+        function analyzeAnswers(answers) {
+    const hobbies = {
+        'Photography': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('visualArts'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
                         'Reading': { 'activity': answers['activityPreferences'] === 'indoor', 'activityLevel': answers['physicalActivityLevel'] === 'low', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('writing'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
                         'Cooking/Baking': { 'activity': answers['activityPreferences'] === 'indoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
                         'Gardening': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate',  },
@@ -308,30 +293,31 @@
                         'Home Brewing': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
                         'Beekeeping': { 'activity': answers['activityPreferences'] === 'outdoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
                         'Martial Arts': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
-                    }; 
-                    const relevantHobbies = [];
+        // Add more hobbies here
+    };
 
-                    for (const hobby in hobbies) {
-                        const score = calculateScore(answers, hobbies[hobby]);
+    const relevantHobbies = [];
 
-                        // Adjust the score threshold based on your preferences
-                        if (score >= 1) {
-                            relevantHobbies.push(hobby);
-                        }
-                    }
+    for (const hobby in hobbies) {
+        const score = calculateScore(answers, hobbies[hobby]);
 
-                    return relevantHobbies;
-                }
-                
-                function displayResult(relevantHobbies) {
-                    if (relevantHobbies.length > 0) {
-                        const hobbyList = relevantHobbies.join(', ');
-                        alert(`Your relevant hobbies are: ${hobbyList}`);
-                    } else {
-                        alert('No relevant hobbies found.');
-                    }
-                }
-            </script>
+        // Adjust the score threshold based on your preferences
+        if (score >0) {
+            relevantHobbies.push(hobby);
+        }
+    }
 
-        </body>
-        </html>
+    return relevantHobbies;
+}
+
+        function displayResult(relevantHobbies) {
+            if (relevantHobbies.length > 0) {
+                const hobbyList = relevantHobbies.join(', ');
+                document.getElementById('result').innerText = `Your relevant hobbies are: ${hobbyList}`;
+            } else {
+                document.getElementById('result').innerText = 'No relevant hobbies found.';
+            }
+        }
+    </script>
+</body>
+</html>
