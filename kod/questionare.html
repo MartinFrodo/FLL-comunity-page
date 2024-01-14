@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Recommender</title>
+    <style>
+        body {
+            margin: 20px;
+            background-color: #ffffff;
+            font-family: sans-serif, Arial, Helvetica;
+        }
+           /* navbar info */
+        .navbar{
+            width: 100%;
+            padding: 3px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(222, 155, 23);
+            text-align: right;
+            float: left;
+                        
+        }
+        .navbar .logo{
+            width: 150px;
+            cursor: pointer;
+            float: left;
+        }
+        .navbar ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            float: right;
+        }
+        .navbar ul li a:hover{
+            color: #3c77d6;
+        }
+        .links{
+            width: 200px;
+            background-color: #ffffff;
+            padding: 20px 0px 20px 0px;
+            display: flex;
+            box-sizing: border-box;
+            box-shadow: #000;
+            align-items: flex-start;
+        }   
+        /* navbar info end  */
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+            color: blue;
+        }
+        /* sem hoď to aby bol sidepanek na boku a neovplivňoval main content*/
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #f4511e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #000000;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+        padding: 10px 20px;
+        background-color: #cb9018 ;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #000000;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        
+            <div class="navbar">
+                <nav>
+                    <img src="images/Logo.png" class="logo">
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li> 
+                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="login.html">Login</a></li> 
+                        
+                    </ul>
+                </nav>
+            </div>
+        
+    </header>
+    
+
+    <h1>Discover Your Perfect Hobby</h1>
+    <div class="sidepanel">
+        hhhhhhh
+        hhhhhhh
+    </div>
+    <form id="hobbyForm" onsubmit="submitForm(); return false;">
+        
+            <!-- Activity Preferences -->
+            <label>Do you prefer outdoor or indoor activities?
+                <div>
+                    <input type="radio" name="activityPreferences" value="outdoor"> Outdoor
+                    <input type="radio" name="activityPreferences" value="indoor"> Indoor
+                </div>
+                
+            </label>
+    
+            <label>Are you drawn to activities in natural settings or urban environments?
+                <div>
+                <input type="radio" name="environmentPreferences" value="natural"> Natural Settings
+                <input type="radio" name="environmentPreferences" value="urban"> Urban Environments
+                </div>
+            </label>
+    
+            <!-- Physical Activity Level -->
+            <label>How would you describe your preferred level of physical activity? (Low, Moderate, High)
+                <div></div>
+                <input type="radio" name="physicalActivityLevel" value="low"> Low
+                <input type="radio" name="physicalActivityLevel" value="moderate"> Moderate
+                <input type="radio" name="physicalActivityLevel" value="high"> High
+            </div>
+            </label>
+    
+            <!-- Creative Interests -->
+                    <label>Are you more inclined towards visual arts, music, or writing?
+                        <div>
+                        <input type="checkbox" name="creativeInterests" value="visualArts"> Visual Arts
+                        <input type="checkbox" name="creativeInterests" value="music"> Music
+                        <input type="checkbox" name="creativeInterests" value="writing"> Writing
+                        </div>
+                    </label>
+    
+                    <!-- Learning Preferences -->
+                    <label>Do you enjoy learning new skills or refining existing ones?
+                        <div>
+                        <input type="radio" name="learningPreferences" value="newSkills"> Yes, I enjoy learning new skills
+                        <input type="radio" name="learningPreferences" value="refiningSkills"> Yes, I enjoy refining existing skills
+                        <input type="radio" name="learningPreferences" value="notInterested"> No, I'm not interested in learning new skills
+                        </div>
+                    </label>
+    
+                    <!-- Time Commitment -->
+                    <label>How much time can you commit to your hobby per week? (Low: 1-3 hours, Moderate: 4-6 hours, High: 7+ hours)
+                        
+                        <select name="timeCommitment">
+                            
+                            <option value="low">Low (1-3 hours)</option>
+                            <option value="moderate">Moderate (4-6 hours)</option>
+                            <option value="high">High (7+ hours)</option>
+                            
+                        </select>
+                    </label>
+    
+                    <!-- Previous Hobbies -->
+                    <label>Have you previously enjoyed sports or physical activities?
+                        <div>
+                        <input type="checkbox" name="previousHobbies" value="sports"> Yes
+                        </div>
+                    </label>
+    
+                    <label>Have you previously enjoyed creative hobbies or arts?
+                        <div>
+                        <input type="checkbox" name="previousHobbies" value="creativeHobbies"> Yes
+                        </div>
+                    </label>
+    
+                    <!-- Specific Hobby Interests -->
+                    
+                    <label>Are you interested in capturing moments with a camera? 
+                        <div>
+                        <input type="checkbox" name="specificHobbyInterests" value="photography"> Yes
+                        </div>
+                    </label>
+    
+                    <label>Do you enjoy getting lost in a good book? 
+                        <div>
+                        <input type="checkbox" name="specificHobbyInterests" value="reading"> Yes
+                        </div>
+                    </label>
+    
+                    <label>Are you interested in cultivating plants or gardening?
+                        <div>
+                        <input type="checkbox" name="specificHobbyInterests" value="gardening"> Yes
+                        </div>  
+                    </label>
+    
+                    <label>Are you drawn to the challenge of strategic games like chess?
+                        <div>
+                        <input type="checkbox" name="specificHobbyInterests" value="chess"> Yes
+                        </div>
+                    </label>
+    
+                    <!-- Social Engagement -->
+                    <label>Are you interested in community engagement and collaboration?
+                        <div>
+                        <input type="checkbox" name="socialEngagement" value="yes"> Yes
+                        </div>
+                    </label>
+    
+                    <!-- Adventure and Adrenaline -->
+                    <label>Are you open to adventurous activities like skydiving or paragliding?
+                        <div>
+                        <input type="checkbox" name="adventureAndAdrenaline" value="yes"> Yes
+                        </div>
+                    </label>
+    
+                    <!-- Skill Development -->
+                    <label>Are you interested in continuously learning and developing new skills within your hobby?
+                        <div>
+                        <input type="checkbox" name="skillDevelopment" value="yes"> Yes 
+                        </div>
+                    </label>
+    
+                    <!-- Cultural Exploration -->
+                    <label>Are you interested in learning about different cultures and languages?
+                        <div>
+                        <input type="checkbox" name="culturalExploration" value="yes"> Yes
+                        </div>
+                    </label>
+    
+                    <button type="button" onclick="submitForm()">Discover My Hobby</button>
+                
+            </form>
+
+            <div id="result"></div>
+
+            <script>
+                function submitForm() {
+                    const form = document.getElementById('hobbyForm');
+                    const formData = new FormData(form);
+                    const answers = {};
+
+                    formData.forEach((value, key) => {
+                        answers[key] = value;
+                    });
+
+                    const recommendedHobbies = analyzeAnswers(answers);
+
+                    // Display the result
+                    displayResult(recommendedHobbies);
+                }
+                
+                function calculateScore(answers, criteria) {
+                    return Object.keys(criteria).filter(key => {
+                        if (Array.isArray(criteria[key])) {
+                            // For checkboxes (arrays), check if at least one option is selected
+                            return criteria[key].some(option => answers[key] && answers[key].includes(option));
+                        } else {
+                            // For radio buttons, check for an exact match
+                            return answers[key] === criteria[key];
+                        }
+                    }).length;
+                }
+                
+                function analyzeAnswers(answers) {
+
+                    const hobbies = 
+                    {   'Photography': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('visualArts'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Reading': { 'activity': answers['activityPreferences'] === 'indoor', 'activityLevel': answers['physicalActivityLevel'] === 'low', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('writing'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Cooking/Baking': { 'activity': answers['activityPreferences'] === 'indoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Gardening': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate',  },
+                        'Painting/Drawing': { 'activity': answers['activityPreferences'] === 'indoor', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('visualArts'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Playing a Musical Instrument': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Writing': { 'activity': answers['activityPreferences'] === 'indoor', 'creativeInterests': answers['creativeInterests'] && answers['creativeInterests'].includes('writing'), 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Hiking': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'high' },
+                        'Cycling': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'high' },
+                        'DIY Crafting': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Yoga/Meditation': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Fishing': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'low' },
+                        'Model Building': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Chess/Board Games': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Collecting': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Dancing': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Volunteering': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'socialEngagement': answers['socialEngagement'] === 'yes' },
+                        'Rock Climbing': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'high' },
+                        'Camping': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate' },
+                        'Learn a New Language': { 'learningPreferences': answers['learningPreferences'] !== 'notInterested', 'culturalExploration': answers['culturalExploration'] === 'yes' },
+                        'Archery': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate' },
+                        'Traveling': { 'activity': answers['activityPreferences'] === 'outdoor', 'activityLevel': answers['physicalActivityLevel'] === 'moderate', 'culturalExploration': answers['culturalExploration'] === 'yes' },
+                        'Skydiving/Paragliding': { 'activity': answers['activityPreferences'] === 'outdoor', 'adventureAndAdrenaline': answers['adventureAndAdrenaline'] === 'yes' },
+                        'Bird Watching': { 'activity': answers['activityPreferences'] === 'outdoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Astrophotography': { 'activity': answers['activityPreferences'] === 'outdoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Comic Book/Graphic Novel Reading': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Surfing': { 'activity': answers['activityPreferences'] === 'outdoor', 'adventureAndAdrenaline': answers['adventureAndAdrenaline'] === 'yes' },
+                        'Antiquing': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Pottery': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Home Brewing': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Beekeeping': { 'activity': answers['activityPreferences'] === 'outdoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                        'Martial Arts': { 'activity': answers['activityPreferences'] === 'indoor', 'learningPreferences': answers['learningPreferences'] !== 'notInterested' },
+                    }; 
+                    const relevantHobbies = [];
+
+                    for (const hobby in hobbies) {
+                        const score = calculateScore(answers, hobbies[hobby]);
+
+                        // Adjust the score threshold based on your preferences
+                        if (score >= 1) {
+                            relevantHobbies.push(hobby);
+                        }
+                    }
+
+                    return relevantHobbies;
+                }
+                
+                function displayResult(relevantHobbies) {
+                    if (relevantHobbies.length > 0) {
+                        const hobbyList = relevantHobbies.join(', ');
+                        alert(`Your relevant hobbies are: ${hobbyList}`);
+                    } else {
+                        alert('No relevant hobbies found.');
+                    }
+                }
+            </script>
+            <button history.back()>Go Back</button>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    
+    <style>
+        body{
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif, Arial, Helvetica;
+            color: #000000;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        } 
+        .container{
+            max-width: 1170px;
+            margin: auto;
+            padding:  30px;
+            
+        }
+        /* navbar info */
+        .navbar{
+            width: 100%;
+            padding: 3px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(222, 155, 23);
+            text-align: right;
+                        
+        }
+        .navbar .logo{
+            width: 150px;
+            cursor: pointer;
+            float: left;
+        }
+        .navbar ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            float: right;
+        }
+        .navbar ul li a:hover{
+            color: #3c77d6;
+        }
+        /* navbar info end  */
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0;
+        }
+        .row .col{
+            flex: 1;
+            text-align: center;
+        }
+        .row .col h1{
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .row .col p{
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .hero-btn{
+            display: inline-block;
+            background: #a29bfe;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 34px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 6px;
+            
+        }
+        .hero-btn:hover{
+            background: #6c5ce7;
+        }
+        .row .col:last-child{
+            text-align: right;
+        }
+        .row .col:last-child img{
+            width: 100%;
+            max-width: 500px;
+        }
+        .footer{
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+
+        
+    h1 {
+        margin: 0;
+    }
+    
+    main {
+        margin: 20px;
+    }
+    
+    .team-member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+   
+    button {
+        padding: 10px 20px;
+        background-color: #cb9018 ;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #000000;
+    }
+    .Logo{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+       
+    }
+
+     </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <img src="images/Logo.png" class="logo">
+        <nav>
+            <ul>
+                
+                <li><a href="aboutus.html">About Us</a></li> 
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+</header>
+<main>
+    <h1>About Us</h1>
+    <h2>Our Team</h2>
+    <div class="team-member">
+        <img src="team-member1.jpg" alt="Team Member 1">
+        <div>
+            <h3>John Doe</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="team-member2.jpg" alt="Team Member 2">
+        <div>
+            <h3>Jane Smith</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="team-member3.jpg" alt="Team Member 3">
+        <div>
+            <h3>David Johnson</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        </div>
+    </div>
+    <button onclick="history.back()">Go Back</button>
+</main>
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body{
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif, Arial, Helvetica;
+            color: #000000;
+            background-color: rgb(207, 175, 135);
+            margin: 0;
+            padding: 0;
+            
+        } 
+        .container{
+            max-width: 1170px;
+            margin: auto;
+            padding:  30px;
+            text-align: center;
+            
+        }
+        
+        /* navbar info */
+        .navbar{
+            width: 100%;
+            padding: 3px ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(222, 155, 23);
+            text-align: right;
+                        
+        }
+        .navbar .logo{
+            width: 150px;
+            cursor: pointer;
+            float: left;
+        }
+        .navbar ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            margin-right: 20px;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            float: right;
+        }
+        .navbar ul li a:hover{
+            color: #3c77d6;
+        }
+        /* navbar info end  */
+        button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #cb9018;
+    }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <img src="images/Logo.png" class="logo">
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li> 
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>Contact Us</h1>
+    
+    <element class="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </element>
+    
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
